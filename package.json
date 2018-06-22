@@ -1,0 +1,59 @@
+{
+  "name": "jsdecorator",
+  "version": "1.0.0",
+  "description": "JavaScript utility library contains decorator factory for the methods.",
+  "main": "index",
+  "scripts": {
+    "test": "env-cmd ./environment/ci.env jest --verbose --runInBand",
+    "build:noclean": "tsc",
+    "build": "yarn clean && yarn build:noclean",
+    "clean:dist": "rm -rf *.js && rm -rf *.js.map",
+    "clean:types": "rm -rf types",
+    "clean": "yarn clean:dist && yarn clean:types",
+    "publish": "yarn login && yarn publish"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testEnvironment": "node",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "homepage": "https://github.com/tgorka/jdecorator",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tgorka/jdecorator.git"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Tomasz Gorka",
+    "email": "tomasz.gorka@carmoov.io"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "30-seconds-of-code": "^0.0.2",
+    "@types/debug": "0.0.30",
+    "@types/jest": "^22.2.0",
+    "@types/node": "^9.6.4",
+    "apollo-codegen": "^0.19.1",
+    "aws-appsync-codegen": "^0.17.2",
+    "env-cmd": "^7.0.0",
+    "jest": "^22.4.2",
+    "jest-cli": "^23.0.1",
+    "ts-jest": "^22.4.1",
+    "typescript": "^2.7.1",
+    "yarn": "^0.21.3"
+  }
+}
